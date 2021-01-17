@@ -3,13 +3,13 @@ const path = require("path");
 const dotenv = require("dotenv");
 const cors = require("cors");
 dotenv.config({ path: "./config.env" });
-const router = require("./routes/blogRoutes");
+const router = require("./routes/companyRoutes");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json()); //middleware
-app.use("/blogList", router);
+app.use("/companyList", router);
 
 app.listen(
   process.env.PORT,
